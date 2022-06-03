@@ -24,11 +24,13 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         FuenteAudio = GetComponent<AudioSource>();
+       // BulletPosition = Pistol.transform.rotation;
     }
     // Update is called once per frame
     void Update()
     {
-        Bullet.transform.Translate();
+        Bullet.transform.position = Pistol.transform.position;
+        //Bullet.transform.rotation = BulletPosition;
 
         if (Input.GetKeyDown(KeyCode.E))
         {

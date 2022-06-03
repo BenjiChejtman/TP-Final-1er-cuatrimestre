@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -355,6 +355,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &593039949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5962488277758119446, guid: bffde1e0790a7a6469457db5080a68c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1397777284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014721919
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +497,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1145434655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1317888373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1315654207
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,8 +536,10 @@ MonoBehaviour:
   spawnPoint: {fileID: 1787299777}
   BulletSpeed: 0.1
   Bullet: {fileID: 8229174580848181138, guid: 3c59cd53c5f604247a5f4bdacf981076, type: 3}
-  User: {fileID: 1787299773}
+  User: {fileID: 1145434655}
+  Pistol: {fileID: 593039949}
   GunSound: {fileID: 8300000, guid: 4eb4b6453ccc7c14380c6352b07c220f, type: 3}
+  GunPosition: {fileID: 2029746644}
 --- !u!4 &1315654209
 Transform:
   m_ObjectHideFlags: 0
@@ -887,6 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b09eac0dcf3c54ab588619b0892ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputField1: {fileID: 0}
 --- !u!4 &2029746644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6044446476130236074, guid: bffde1e0790a7a6469457db5080a68c4,
