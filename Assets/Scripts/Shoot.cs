@@ -4,29 +4,39 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
+    public Transform spawnPoint;
     public float BulletSpeed;
 
     public GameObject Bullet;
     public GameObject User;
+    public GameObject Pistol;
 
     GameObject BulletUsed;
 
+    public AudioClip GunSound;
+    AudioSource FuenteAudio;
+
+    public Transform GunPosition;
+
+    //GameObject[] bullets = new GameObject[5];
+    //int i;
+
     void Start()
     {
-        
+        FuenteAudio = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
     {
-        Bullet.transform.position = User.transform.position + new Vector3 (0.5f, 0, 0);
-        //Bullet.transform.eulerAngles.y = User.transform.eulerAngles.y;
+        Bullet.transform.Translate();
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             BulletUsed = Instantiate(Bullet);
-            Destroy(BulletUsed, 10);
+            FuenteAudio.clip = GunSound;
+            FuenteAudio.Play();
+            Destroy(BulletUsed, 5);  
         }
-
-        BulletUsed.transform.position += new Vector3(BulletSpeed, 0, 0);
+        BulletUsed.transform.Translate(BulletSpeed, 0, 0);
     }
 }

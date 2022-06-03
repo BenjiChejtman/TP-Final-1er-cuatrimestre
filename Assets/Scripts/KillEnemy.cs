@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollowsUser : MonoBehaviour
+public class KillEnemy : MonoBehaviour
 {
-    public GameObject Target;
+    public GameObject Enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,14 @@ public class EnemyFollowsUser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, .03f);
+        
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "Cylinder(Clone)")
+        {
+            Destroy(Enemy);
+        }
     }
 }
