@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollowsUser : MonoBehaviour
+public class KilledByEnemy : MonoBehaviour
 {
-    public GameObject Target;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,14 @@ public class EnemyFollowsUser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, .03f);
+        
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.name == "Enemy(Clone)")
+        {
+            transform.position += new Vector3(0, 0.3f, 0);
+        }
     }
 }

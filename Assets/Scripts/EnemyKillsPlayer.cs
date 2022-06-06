@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class EnemyKillsPlayer : MonoBehaviour
 {
     public Text InputField1;
+    public GameObject Player;
+    public GameObject Enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +23,11 @@ public class EnemyKillsPlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision colWithUser)
     {
-        if (colWithUser.gameObject.name == "Enemy")
+        if (colWithUser.gameObject.name == "Player(User)")
         {
-            transform.position += new Vector3(0, 0.3f, 0);
+            Player.transform.position += new Vector3(0, 0.3f, 0);
             //InputField1.hide; 
-            InputField1.text = "Perdiste";
+            //InputField1.text = "Perdiste";
         }
     }
 }

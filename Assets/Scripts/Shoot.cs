@@ -4,41 +4,39 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    public Transform spawnPoint;
-    public float BulletSpeed;
-
-    public GameObject Bullet;
-    public GameObject User;
-    public GameObject Pistol;
-
-    GameObject BulletUsed;
 
     public AudioClip GunSound;
     AudioSource FuenteAudio;
 
-    public Transform GunPosition;
-
-    //GameObject[] bullets = new GameObject[5];
-    //int i;
+    public GameObject BalaInicio;
+    public GameObject BalaPrefab;
+    public float BalaVelocidad;
 
     void Start()
     {
         FuenteAudio = GetComponent<AudioSource>();
-       // BulletPosition = Pistol.transform.rotation;
     }
-    // Update is called once per frame
+
     void Update()
     {
-        Bullet.transform.position = Pistol.transform.position;
-        //Bullet.transform.rotation = BulletPosition;
-
         if (Input.GetKeyDown(KeyCode.E))
         {
-            BulletUsed = Instantiate(Bullet);
+            //1-Instanciar la BalaPrefab en las posiciones de BalaInicio
+            GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
+
+            //Obtener Rigidbody para agregar Fuerza. 
+            Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
+
+            //Agregar la fuerza a la Bala
+            rb.AddForce(transform.forward * BalaVelocidad);
+
             FuenteAudio.clip = GunSound;
             FuenteAudio.Play();
-            Destroy(BulletUsed, 5);  
+
+            //Debemos Destruir la bala
+            Destroy(BalaTemporal, 5);
+
+
         }
-        BulletUsed.transform.Translate(BulletSpeed, 0, 0);
     }
 }
