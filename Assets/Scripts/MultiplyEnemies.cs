@@ -6,6 +6,7 @@ public class MultiplyEnemies : MonoBehaviour
 {
     public GameObject Enemy1;
     public GameObject Enemy2;
+    public GameObject Target;
     int counter = 0;
 
     Vector3 posicionInicial1;
@@ -29,7 +30,7 @@ public class MultiplyEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            while(counter < 5)
+           /* while(counter < 5)
             {
                 Instantiate(Enemy1);
                 Instantiate(Enemy2);
@@ -38,10 +39,16 @@ public class MultiplyEnemies : MonoBehaviour
                 
                 myVector32.x = i2;
                 ;
-            Enemy1.transform.position = posicionInicial1 + myVector31;
+                Enemy1.transform.position = posicionInicial1 + myVector31;
                 Enemy2.transform.position = posicionInicial2 + myVector32;
                 i1 +=3;
                 i2 += 3;
-            }   
+            }
+        
+            Enemy1.transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, 0.03f);
+            Enemy2.transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, 0.03f);
+        
+        */
     }
+
 }

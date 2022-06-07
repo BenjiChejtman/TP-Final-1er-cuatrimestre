@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyKillsPlayer : MonoBehaviour
 {
-    public Text InputField1;
     public GameObject Player;
     public GameObject Enemy;
 
@@ -25,7 +24,7 @@ public class EnemyKillsPlayer : MonoBehaviour
     {
         if (colWithUser.gameObject.name == "Player(User)")
         {
-            Player.transform.position += new Vector3(0, 0.3f, 0);
+            Player.transform.position = new Vector3(0, 0.3f, 0);
             //InputField1.hide; 
             //InputField1.text = "Perdiste";
         }
