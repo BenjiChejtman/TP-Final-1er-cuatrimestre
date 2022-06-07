@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyFollowsUser : MonoBehaviour
 {
@@ -23,8 +24,7 @@ public class EnemyFollowsUser : MonoBehaviour
     {
         if (colWithUser.gameObject.name == "FPSController")
         {
-            Target.transform.position = new Vector3(20, 0.3f, 0);
-            FPSCamera.transform.position = new Vector3(20, 0.3f, 0);
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
