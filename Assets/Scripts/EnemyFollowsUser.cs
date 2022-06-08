@@ -26,5 +26,13 @@ public class EnemyFollowsUser : MonoBehaviour
         {
             SceneManager.LoadScene("SampleScene");
         }
+
+        if (colWithUser.gameObject.name == "Cylinder(Clone)")
+        {
+            Destroy(gameObject);
+            Debug.Log("Funciona");
+        }
     }
+
+    
 }

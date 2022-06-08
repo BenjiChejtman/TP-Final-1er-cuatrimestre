@@ -30,10 +30,10 @@ public class KillEnemy : MonoBehaviour
         {
             Destroy(Enemy2);
         }
-        if (col.gameObject.name == "enemigo")
+        /*if (col.gameObject.name == "enemigo")
         {
             Destroy(col.gameObject);
         }
-        Destroy(gameObject);
+        Destroy(gameObject);*/
     }
 }
