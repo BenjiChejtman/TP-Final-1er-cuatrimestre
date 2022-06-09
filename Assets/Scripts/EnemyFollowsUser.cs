@@ -8,7 +8,9 @@ public class EnemyFollowsUser : MonoBehaviour
 {
     public GameObject Target;
     public GameObject FPSCamera;
-    public Text NumeroKills;
+    public Text Perdiste;
+    public Text TextKills;
+    int Kills;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +26,28 @@ public class EnemyFollowsUser : MonoBehaviour
 
     void OnTriggerEnter(Collider colWithUser)
     {
-        if (colWithUser.gameObject.name == "FPSController")
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
-
+        
         if (colWithUser.gameObject.name == "Cylinder(Clone)")
         {
-            transform.position = new Vector3(0, 0, 0);
+            transform.position = new Vector3(0, 2, 0);
+            Kills++;
+            
+            //TextKills.text = Kills;
         }
     }
 
-    
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "FPSController")
+        {
+            
+            SceneManager.LoadScene("SampleScene");
+            Perdiste.text = "Perdiste";
+
+        }
+
+    }
+
+
+
 }
