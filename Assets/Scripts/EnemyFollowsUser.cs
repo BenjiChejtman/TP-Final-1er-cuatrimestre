@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EnemyFollowsUser : MonoBehaviour
 {
     public GameObject Target;
     public GameObject FPSCamera;
+    public Text NumeroKills;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class EnemyFollowsUser : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, .03f);
     }
 
-    void OnCollisionEnter(Collision colWithUser)
+    void OnTriggerEnter(Collider colWithUser)
     {
         if (colWithUser.gameObject.name == "FPSController")
         {
@@ -29,8 +31,7 @@ public class EnemyFollowsUser : MonoBehaviour
 
         if (colWithUser.gameObject.name == "Cylinder(Clone)")
         {
-            Destroy(gameObject);
-            Debug.Log("Funciona");
+            transform.position = new Vector3(0, 0, 0);
         }
     }
 
