@@ -568,7 +568,7 @@ MonoBehaviour:
   Target: {fileID: 1787299773}
   FPSCamera: {fileID: 288561414}
   Perdiste: {fileID: 668216093}
-  TextKills: {fileID: 0}
+  TextKills: {fileID: 638391610}
 --- !u!54 &459675991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -770,7 +770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 465, y: 95}
+  m_AnchoredPosition: {x: 465, y: 107}
   m_SizeDelta: {x: 447.71484, y: 245.32199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638391610
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   Target: {fileID: 1787299773}
   FPSCamera: {fileID: 1145434655}
   Perdiste: {fileID: 668216093}
-  TextKills: {fileID: 0}
+  TextKills: {fileID: 638391610}
 --- !u!54 &1052773264
 Rigidbody:
   m_ObjectHideFlags: 0

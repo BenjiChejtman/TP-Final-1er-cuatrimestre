@@ -31,8 +31,12 @@ public class EnemyFollowsUser : MonoBehaviour
         {
             transform.position = new Vector3(0, 2, 0);
             Kills++;
-            
-            //TextKills.text = Kills;
+            TextKills.text = "Kills: "+Kills;
+
+            if(Kills == 10)
+            {
+                SceneManager.LoadScene("Ganaste");
+            }
         }
     }
 
@@ -41,8 +45,7 @@ public class EnemyFollowsUser : MonoBehaviour
         if (col.gameObject.name == "FPSController")
         {
             
-            SceneManager.LoadScene("SampleScene");
-            Perdiste.text = "Perdiste";
+            SceneManager.LoadScene("Perdiste");  
 
         }
 
