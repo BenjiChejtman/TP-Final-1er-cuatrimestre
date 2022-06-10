@@ -15,6 +15,8 @@ public class Shoot : MonoBehaviour
 
     public Text CantBalasAlcanzada;
 
+    int CantBala;
+
     void Start()
     {
         FuenteAudio = GetComponent<AudioSource>();
@@ -23,7 +25,7 @@ public class Shoot : MonoBehaviour
     void Update()
     {
 
-        for (int Cantbala = 0; Cantbala < 6; Cantbala++)
+        while(CantBala < 6)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -41,9 +43,11 @@ public class Shoot : MonoBehaviour
 
                 //Debemos Destruir la bala
                 Destroy(BalaTemporal, 5);
+
+                CantBala++;
             }
 
-            if (Cantbala == 5)
+            if (CantBala == 5)
             {
                 CantBalasAlcanzada.text = "Te quedaste sin municion!";
             }
