@@ -15,7 +15,7 @@ public class Shoot : MonoBehaviour
 
     public Text CantBalasAlcanzada;
 
-    int CantBala;
+    int i = 0;
 
     void Start()
     {
@@ -24,33 +24,23 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-
-        while(CantBala < 6)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //1-Instanciar la BalaPrefab en las posiciones de BalaInicio
-                GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
-
-                //Obtener Rigidbody para agregar Fuerza. 
-                Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
-
-                //Agregar la fuerza a la Bala
-                rb.AddForce(transform.forward * BalaVelocidad);
-
-                FuenteAudio.clip = GunSound;
-                FuenteAudio.Play();
-
-                //Debemos Destruir la bala
-                Destroy(BalaTemporal, 5);
-
-                CantBala++;
-            }
-
-            if (CantBala == 5)
-            {
-                CantBalasAlcanzada.text = "Te quedaste sin municion!";
-            }
+            GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
+            Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * BalaVelocidad);
+            FuenteAudio.clip = GunSound;
+            FuenteAudio.Play();
+            Destroy(BalaTemporal, 5);
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
+            //    Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
+            //    rb.AddForce(transform.forward * BalaVelocidad);
+            //    FuenteAudio.clip = GunSound;
+            //    FuenteAudio.Play();
+            //    Destroy(BalaTemporal, 5);
+            //}
         }
     }
 }
