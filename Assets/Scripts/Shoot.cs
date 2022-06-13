@@ -38,7 +38,7 @@ public class Shoot : MonoBehaviour
             //    Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
             //    rb.AddForce(transform.forward * BalaVelocidad);
             //    FuenteAudio.clip = GunSound;
-            //    FuenteAudio.Play();
+            /   /    FuenteAudio.Play();
             //    Destroy(BalaTemporal, 5);
             //}
         }
