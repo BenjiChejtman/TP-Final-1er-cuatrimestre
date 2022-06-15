@@ -9,7 +9,6 @@ public class EnemyFollowsUser : MonoBehaviour
     public GameObject Target;
     public GameObject FPSCamera;
     public GameObject Cube;
-    GameObject Bala;
     public Text Perdiste;
     public Text TextKills;
     int Kills;
@@ -57,7 +56,6 @@ public class EnemyFollowsUser : MonoBehaviour
         if (colWithUser.gameObject.name == "Cylinder(Clone)")
         {
             transform.position = new Vector3(0, 2, 0);
-            Destroy(Bala);
             Kills++;
             TextKills.text = "Kills: "+Kills;
             while(i < 3)
