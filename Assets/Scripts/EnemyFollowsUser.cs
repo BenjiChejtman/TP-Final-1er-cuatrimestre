@@ -9,21 +9,46 @@ public class EnemyFollowsUser : MonoBehaviour
     public GameObject Target;
     public GameObject FPSCamera;
     public GameObject Cube;
+    GameObject Bala;
     public Text Perdiste;
     public Text TextKills;
     int Kills;
     int i = 0;
 
+   /* public AudioClip GunSound;
+    AudioSource FuenteAudio;
+
+    public GameObject BalaInicio;
+    public GameObject BalaPrefab;
+    public float BalaVelocidad;
+
+    //public Text CantBalasAlcanzada;
+
+    int i = 0;*/
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //FuenteAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, .1f);
+
+        /*if (Input.GetKeyDown(KeyCode.E))
+        {
+            GameObject BalaTemporal = Instantiate(BalaPrefab);
+            BalaTemporal.transform.position = BalaInicio.transform.position;
+            BalaTemporal.transform.eulerAngles = BalaInicio.transform.eulerAngles;
+            Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * BalaVelocidad);
+            FuenteAudio.clip = GunSound;
+            FuenteAudio.Play();
+            Destroy(BalaTemporal, 5);
+            Bala = BalaTemporal;
+        }*/
     }
 
     void OnTriggerEnter(Collider colWithUser)
@@ -32,7 +57,7 @@ public class EnemyFollowsUser : MonoBehaviour
         if (colWithUser.gameObject.name == "Cylinder(Clone)")
         {
             transform.position = new Vector3(0, 2, 0);
-            
+            Destroy(Bala);
             Kills++;
             TextKills.text = "Kills: "+Kills;
             while(i < 3)

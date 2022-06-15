@@ -13,7 +13,7 @@ public class Shoot : MonoBehaviour
     public GameObject BalaPrefab;
     public float BalaVelocidad;
 
-    public Text CantBalasAlcanzada;
+    //public Text CantBalasAlcanzada;
 
     int i = 0;
 
@@ -31,16 +31,7 @@ public class Shoot : MonoBehaviour
             rb.AddForce(transform.forward * BalaVelocidad);
             FuenteAudio.clip = GunSound;
             FuenteAudio.Play();
-            Destroy(BalaTemporal, 5);
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
-            //    Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
-            //    rb.AddForce(transform.forward * BalaVelocidad);
-            //    FuenteAudio.clip = GunSound;
-            /   /    FuenteAudio.Play();
-            //    Destroy(BalaTemporal, 5);
-            //}
+            Destroy(BalaTemporal, 1);
         }
     }
 }
