@@ -31,7 +31,7 @@ public class Shoot : MonoBehaviour
             rb.AddForce(transform.forward * BalaVelocidad);
             FuenteAudio.clip = GunSound;
             FuenteAudio.Play();
-            Destroy(BalaTemporal, 1);
+            Destroy(BalaTemporal, 0.4f);
         }
     }
 }
