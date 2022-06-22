@@ -55,7 +55,7 @@ public class EnemyFollowsUser : MonoBehaviour
         
         if (colWithUser.gameObject.name == "Cylinder(Clone)")
         {
-            transform.position = new Vector3(0, 2, 0);
+            transform.position = new Vector3(0, 2, 0);  
             Kills++;
             TextKills.text = "Kills: "+Kills;
             while(i < 3)
