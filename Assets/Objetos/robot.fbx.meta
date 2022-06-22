@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: cd96ba7555e1d094fb6d0601f55d9b4c
+guid: 3d96d49f5ae908546a8425c5fd154d96
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.004
-    2100002: MetalArma
-    2100004: Cuero
-    2100006: Material.003
+    2100000: Ojos.002
+    2100002: Metal
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.004
+    4300000: Robot
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cuero
-    second: {fileID: 2100000, guid: d886b0763461d994d979fe71e4a18571, type: 2}
+      name: Metal
+    second: {fileID: 2100000, guid: de2af0459ebee97419c12d0535478934, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 30792929db7cf6744af035c22b50a872, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: e1cc46cac7cd82a489f39b10ff5aa483, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalArma
-    second: {fileID: 2100000, guid: 9185b8ec500ff8b41918d89ab87df45b, type: 2}
+      name: Ojos.002
+    second: {fileID: 2100000, guid: ef3c7ba67d8c857478cc2a41ee158c7d, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: deserteagleblueprint
-    second: {fileID: 2800000, guid: 820be4ab0bc30bc4c90f8ea6df5a2984, type: 3}
+      name: MetalRobot
+    second: {fileID: 2800000, guid: 4b34b459ecc5cef4c8c38966c164f552, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
