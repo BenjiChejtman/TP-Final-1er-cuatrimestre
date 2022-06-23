@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd96ba7555e1d094fb6d0601f55d9b4c
+guid: c3af6b9f80f12e54bb5b86c5ac3f310c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -17,27 +17,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cuero
-    second: {fileID: 2100000, guid: d886b0763461d994d979fe71e4a18571, type: 2}
+    second: {fileID: 2100000, guid: 62944e7b7a7576447b8b5ceb6c7bdd95, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.003
-    second: {fileID: 2100000, guid: 30792929db7cf6744af035c22b50a872, type: 2}
+    second: {fileID: 2100000, guid: 6c2be7f7168ebf4478263bf3d7cfba34, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.004
-    second: {fileID: 2100000, guid: e1cc46cac7cd82a489f39b10ff5aa483, type: 2}
+    second: {fileID: 2100000, guid: 3c665e8f2c7948d43a1002efb8386bb4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MetalArma
-    second: {fileID: 2100000, guid: 9185b8ec500ff8b41918d89ab87df45b, type: 2}
+    second: {fileID: 2100000, guid: dab3f4c8f0c255d49b4cb17002d42f0d, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: deserteagleblueprint
-    second: {fileID: 2800000, guid: 820be4ab0bc30bc4c90f8ea6df5a2984, type: 3}
+      name: paleta-de-colores-metalicos
+    second: {fileID: 2800000, guid: c912ad59d130b814d8068a578ee4500c, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
